@@ -1,1 +1,1 @@
-web: ./app/index.html
+web: ./index.html
