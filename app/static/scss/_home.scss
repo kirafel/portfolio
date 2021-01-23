@@ -55,6 +55,10 @@
         @include breakpoint-down(medium) {
             height: 18.1875rem;
             width: 18.62375rem;
+            transform: translateY(-10rem);
+        }
+
+        @include breakpoint-down(small) {
             transform: translateY(-13rem);
         }
 
