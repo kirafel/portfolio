@@ -548,8 +548,8 @@ li {
   .home__image {
     height: 18.1875rem;
     width: 18.62375rem;
-    -webkit-transform: translateY(-10rem);
-            transform: translateY(-10rem);
+    -webkit-transform: translateY(-13rem);
+            transform: translateY(-13rem);
   }
 }
 

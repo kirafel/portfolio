@@ -51,11 +51,11 @@
 
         height: 14.1875rem;
         width: 14.62375rem;
-
+        
         @include breakpoint-down(medium) {
             height: 18.1875rem;
             width: 18.62375rem;
-            transform: translateY(-10rem);
+            transform: translateY(-13rem);
         }
 
         background-image: url("../img/main.png");
