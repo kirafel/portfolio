@@ -1,0 +1,135 @@
+.home {
+    min-height: 100vh;
+    margin-top: 10rem;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    @include breakpoint-up(large) {
+        padding-top: 1.25rem 1.25rem 0 0;
+        grid-template-columns: repeat(2, 1fr);    
+        margin-top: 0;
+        padding: 1.25rem 1.25rem 0 0;
+    }
+    
+    &__logo {
+        align-self: flex-end;
+        width: 7.5rem;
+    }
+
+    &__heading {
+
+        @include breakpoint-down(medium) {
+            margin-top: -8rem;
+        }
+
+        @include breakpoint-down(small) {
+            h1 {
+                font-size: $font-msm;
+                font-weight: 600;
+            }
+        }
+
+        opacity: 0;
+        animation: fadeIn 500ms ease-in-out forwards;
+    }
+
+    &__content {
+        position: relative;
+        min-width: 100%;
+        background-color: rgba($softRed, 0.9);
+        padding-bottom: 1.75rem;
+        
+        justify-content: center;
+        
+        @include breakpoint-up(medium) {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    &__image {
+
+        height: 14.1875rem;
+        width: 14.62375rem;
+
+        @include breakpoint-down(medium) {
+            height: 18.1875rem;
+            width: 18.62375rem;
+            transform: translateY(-10rem);
+        }
+
+        background-image: url("../img/main.png");
+        background-repeat: no-repeat;
+        background-position:top;
+        background-size: cover;
+
+        border-radius: 50%;
+
+        position: relative;
+        top: 0;
+        transform: translateY(-8rem);
+        
+        @include breakpoint-up(large) {
+            width: 32.25rem;
+            height: fit-content;
+            animation: fadeLeft 500ms ease-in-out forwards;
+        }
+    }
+
+    .dot {
+
+        display: inline-block;
+        height: 1.1875rem;
+        width: 1.1875rem;
+        background-color: $lightGreen;
+        border-radius: 50%;
+        position: relative;
+        left: -1rem;
+        opacity: 0.9;
+
+        @include breakpoint-up(medium) {
+            height: 2.125rem;
+            width: 2.125rem;
+
+            left: -2rem;
+        }
+    }
+    
+
+    // Scroll Element 
+    .scroll {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        transform: rotate(90deg);
+        right: 0;
+        bottom: 3rem;
+        color: $veryLightGray;
+
+        cursor: pointer;
+
+        &:hover a {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+    }
+
+    a {
+        color: $veryLightGray;
+        transition: all 150ms ease-in-out;
+    }
+
+    i {
+        padding-top: 2rem;
+        transform: rotate(-90deg);
+        font-size: 2.375rem;
+    }
+
+    &__footer {
+        margin-top: 1.75rem;
+
+        &.nomargin {
+            margin-top: 0;
+        }
+    }
+}

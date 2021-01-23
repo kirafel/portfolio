@@ -1,0 +1,107 @@
+.project {
+    min-height: 100vh;
+    position: relative;
+
+    margin-top: 2rem;
+    
+    @include breakpoint-up(large) {
+        margin-top: 5rem;
+        padding: 0 2rem;
+    }
+    
+    &__top {
+        background-color: rgba($softRed, 0.9);
+        min-height: 7.75rem;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            width: fit-content;
+            margin: 0 auto;
+            text-transform: uppercase;
+            color: $veryLightGray;   
+        }
+    }
+
+    &__container {
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 3rem;
+        margin-top: 3rem;
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 0;
+        }
+    }
+
+     &__template {
+        border-radius: 30px;
+        width: 19.6875rem;
+        height: 24rem;
+        box-shadow: 0 15px 15px rgba(0,0,0,0.25);
+        transition: transform 50ms ease-in-out;
+        
+        @include breakpoint-up(large) {
+             width: 21.6875rem;
+             height: 24rem;
+        }
+
+        &:hover {
+
+            transform: scale(1.05) !important;
+            cursor: pointer;
+        }
+  
+        &.__1 {
+           background-image: url("../img/desktop-design.jpg");
+        }
+    
+        &.__2 {
+            background-image: url("../img/project2.jpg");
+
+            @include breakpoint-up(large) {
+                margin-top: -5rem;
+            }
+        }
+    
+        &.__3 {
+            background-image: url("../img/project3.jpg");
+        }
+    
+        &.__1, &.__2, &.__3 {
+            background-position: top;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__circle circle {
+        margin-top: 8rem;
+        fill: rgba($softRed, 0.9);
+        position: absolute;
+        bottom: 0;
+        left: 0;        
+    }
+    
+    &__circle {
+        transform: translateX(33%);
+    }
+
+    &__text {
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        color: $veryLightGray;
+        font-size: $font-lg;
+        text-transform: uppercase;
+        bottom: 4rem;
+        left: 0;
+        text-align: center;
+        padding-top: 1rem;
+        border-top: 3px solid $veryLightGray;
+        letter-spacing: 0.5rem;
+    }
+}

@@ -1,0 +1,137 @@
+.contact {
+    padding-top: 5rem;
+
+    &__container {
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        
+        @include breakpoint-up(medium) {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 0;
+        }
+    }
+
+    &__left {
+        background-color: rgba($softRed, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 3rem 0;
+
+        @include breakpoint-up(medium) {
+            padding: 0 1rem;
+        }
+
+        @include breakpoint-up(large) {
+            padding: 0;
+        }
+    }
+
+    &__mail {
+        width: 9.5625rem;
+    }
+
+    &__para {
+        color: $veryLightGray;
+        line-height: 1.5;
+        
+        &.__1 {
+            margin: 3.125rem 0;
+
+            text-align: center;
+        }
+    
+        &.__2 {
+            width: 60%;
+            text-align: center;
+            margin-bottom: 3.125rem;
+
+            @include breakpoint-up(medium) {
+                width: 80%;
+            }
+            
+            @include breakpoint-up(large) {
+                width: 45%;
+            }
+        }
+    }
+
+    &__github {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 2.8125rem;
+            padding-right: 0.8rem;
+        }
+
+        a {
+            color: $veryLightGray;
+            font-size: $font-sm;
+            transition: all 150ms ease-in-out;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+    }
+
+    &__right {
+        padding: 0 2rem;
+        
+        @include breakpoint-up(large) {
+            padding: 0;
+        }
+    }
+
+    &__heading {
+        color: $darkBlue;
+        text-transform: uppercase;
+        border-top: 3px solid $darkBlue;
+        width: fit-content;
+        margin: 0 auto;
+        letter-spacing: 0.5rem;
+        
+        @include breakpoint-up(medium) {
+            font-size: $font-lg;
+        }
+    }
+    
+    &__form {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        [type="text"], textarea {
+            margin: 1rem 0;
+            width: 100%;
+            border: 2px solid $darkBlue;
+            border-radius: 20px;
+            background-color: transparent;
+            padding: 1rem;
+            font-size: $font-sm;
+            
+            @include breakpoint-up(large) {
+                width: 60%;
+            }
+        }
+        
+        [type="text"]::placeholder, textarea::placeholder {
+            color: $darkBlue;
+            opacity: 0.5;
+            font-size: "Poppins", sans-serif;
+            font-size: $font-sm;
+        }
+
+        textarea {
+            resize: none;
+            margin-bottom: 1.5rem;
+        }
+    }
+}

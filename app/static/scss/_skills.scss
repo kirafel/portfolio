@@ -1,0 +1,150 @@
+.skills {
+    position: relative;
+    min-height: 100vh;
+
+    @include breakpoint-up(large) {
+        margin-top: 12rem;
+    }
+
+    &__top {
+        background-color: rgba($softRed, 0.9);
+        min-height: 7.75rem;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            width: fit-content;
+            margin: 0 auto;
+            text-transform: uppercase;
+            color: $veryLightGray;   
+        }
+    }
+   
+    .progress {
+        margin-top: 5rem;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: end;
+        grid-template-areas: 
+        "top"
+        "bottom";
+
+        @include breakpoint-up(large) {
+            padding-right: 1rem;
+            row-gap: 8rem;
+
+            padding-left: 10rem;
+        }
+        
+        &__top, &__bottom {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between; 
+        }
+
+        &__top {
+            grid-area: top;
+        }
+
+        &__bottom {
+            grid-area: bottom;
+        }
+
+        &__bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint-up(large) {
+            &__bar:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        &__bar:nth-child(odd) {
+            margin-top: 0;
+
+            @include breakpoint-up(large) {
+                margin-top: -5rem;
+            }
+        }
+
+        &__percent, svg {
+            position: relative;
+            width: 150px;
+            height: 150px;
+
+            svg circle {
+                width: 150px;
+                height: 150px;
+                fill: none;
+                stroke-width: 5;
+                stroke: $cyan;
+                transform: translate(5px, 5px);
+                stroke-dasharray: 440;
+                stroke-dashoffset: 440;
+                stroke-linecap: round;
+            }
+
+            @each $i in $percents {
+                svg .circle-#{$i}:nth-child(2) {
+                   stroke-dashoffset: calc(440 - (440 * #{$i}) / 100);
+                }
+            }
+        }
+
+        &__number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__footer {
+            padding-top: 0.5rem;
+        }
+
+    }
+
+    &__heading {
+        position: absolute;
+        color: $veryLightGray;   
+        text-transform: uppercase;
+        border-top: 3px solid $veryLightGray;
+        width: fit-content;
+        transform: rotate(45deg);
+        font-size: $font-lg;
+
+        bottom: 6rem;
+        right: 4.5rem;
+        z-index: 2;
+        letter-spacing: 0.5rem;
+    }
+
+    &__bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 45.5rem;
+        height: 45.5rem;
+        background-color: rgba($softRed, 0.9);
+        transform: rotate(-45deg) translate(-50%,-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        z-index: -1
+    }
+}

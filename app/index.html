@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haithem Daoud | Web Development | Front End Development | Back End Development">
+    <meta name="author" content="Haithem Daoud">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/47cf7cf42c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/scss/style.css">
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+    <title>Portfolio | Full Stack Web Developer</title>
+</head>
+<body>
+    <header class="header d-none-lg">
+        <div class="overlay has-fade"></div>
+
+        <div class="header__container">
+                <a href="index.html">
+                    <img src="static/img/logo.png" alt="HD logo" class="header__logo">
+                </a>
+        
+                <a id="btnHamburger" href="#" class="header__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+        </div>
+
+        <nav class="header__nav has-fade" id="navItems">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </nav>
+    </header>
+
+    <main class="wrapper"> 
+        <!-- Home section -->
+        <section class="home" id="home">
+            <div class="home__content flex flex-ai-c flex-direction">
+                <div class="home__image d-none-lg"></div>
+                <div class="home__heading">
+                    <h1>He<span>llo <span class="dot"></span></span></h1>
+                </div>
+                <h2 class="home__body">I'm Haithem <span>Daoud</span></h2>
+                <h3 class="home__footer">Full Stack Web Developer</h3>
+                <h3 class="home__footer nomargin">UX | UI Designer</h3>
+
+                <div class="scroll">
+                    <a href="#about">Scroll</a>
+                    <i class="fas fa-long-arrow-alt-down"></i>
+                </div>
+            </div>
+            <!-- <div class="home__med-image d-none-lg"></div> -->
+
+            <div class="home__header flex flex-ai-c flex-direction d-none-med">
+                <img src="static/img/logo.png" alt="HD logo" class="home__logo">
+                <img src="static/img/main.png" alt="Haithem Daoud" class="home__image">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about__right flex flex-direction flex-jc-c">
+                <h2 class="about__heading d-none-med">Haithem Daoud</h2>
+                <hr class="d-none-med about__line"/>
+
+                <div class="about__paragraph">
+                    <p>I'm 23 Years Old .</p>
+                    <p>I'm a Junior Full Stack PHP Developer.</p>
+                    <p>Eager to join a creative, problem solving team.</p>
+                    <p>During my academic and personal studies in 3W Academy School,</p>
+                    <p>I was able to acquire and develop solid knowledge in :</p>
+                    <div class="about__para">
+                        <hr class="back"><p> Front End Development</p>
+                    </div>
+                    <div class="about__para">
+                        <hr class="back"><p> Back End Development</p>
+                    </div>
+                    <div class="about__para">
+                        <hr class="back"><p>Frameworks & Libraries</p>
+                        <p> </p>
+                    </div>
+
+                    <p>Angular, VueJS, React, Laravel 7, Node JS, Mongo DB</p>
+                    
+                </div>
+
+                <button class="button">Hire Me</button>
+            </div>
+            <div class="about__left d-none-med" data-aos="fade-left">
+                <div class="about__corner"></div>
+                <img src="static/img/about.png" alt="About Image" class="about__image">
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="skills__top d-none-lg"><h2>Skills</h2></div>
+
+            <div class="progress">
+                <div class="progress__top" data-aos="fade-down">
+                    <!-- Progress Circular Bar -->
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-95" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">95 %</div>
+                        </div>
+                        <p class="progress__footer">HTML5</p>
+                    </div>
+                    <!-- Progress Circular Bar -->
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-90" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">90 %</div>
+                        </div>
+                        <p class="progress__footer">CSS3</p>
+                    </div>
+
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-90" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">90 %</div>
+                        </div>
+                        <p class="progress__footer">Bootstrap5</p>
+                    </div>
+
+
+                    <!-- Progress Circular Bar -->
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-85" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">85 %</div>
+                        </div>
+                        <p class="progress__footer">JavaScript</p>
+                    </div>
+                    <!-- Progress Circular Bar -->
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-90" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">90 %</div>
+                        </div>
+                        <p class="progress__footer">JQuery</p>
+                    </div>
+
+                   
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-80" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">80 %</div>
+                        </div>
+                        <p class="progress__footer">AJAX</p>
+                    </div>
+                </div>
+
+                <div class="progress__bottom" data-aos="fade-down">
+                     <!-- Progress Circular Bar -->
+                     <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-72" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">72 %</div>
+                        </div>
+                        <p class="progress__footer">PHP</p>
+                    </div>
+                    <!-- Progress Circular Bar -->
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-70" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">70 %</div>
+                        </div>
+                        <p class="progress__footer">MySQL</p>
+                    </div>
+                    <!-- Progress Circular Bar -->
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-58" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">58 %</div>
+                        </div>
+                        <p class="progress__footer">Python</p>
+                    </div>
+
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-50" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">50 %</div>
+                        </div>
+                        <p class="progress__footer">JAVA</p>
+                    </div>
+
+                    <div class="progress__bar">
+                        <div class="progress__percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="circle-42" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="progress__number">42 %</div>
+                        </div>
+                        <p class="progress__footer">C++</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills__bottom d-none-med">
+                <h2 class="skills__heading">Skills</h2>
+            </div>
+        </section>
+
+        <section class="project" id="projects">
+            <div class="skills__top d-none-lg"><h2>Projects</h2></div>
+
+            <div class="project__container grid">
+                <div class="project__template __1" data-aos="flip-left"></div>
+                <div class="project__template __2" data-aos="flip-up"></div>
+                <div class="project__template __3" data-aos="flip-right"></div>
+            </div>
+
+            <svg version="1.1" height="250px" width="100%" xmlns="https://www.w3.org/2000/svg" class="project__circle d-none-med">
+                <clipPath id="cut-off-bottom">
+                <rect x="0" y="0" width="500" height="250" />
+                </clipPath>
+                <circle cx="200" cy="200" r="200" clip-path="url(#cut-off-bottom)" />
+            </svg>
+
+            <h2 class="project__text d-none-med">Projects</h2>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact__container grid">
+                <div class="contact__left">
+                    <img src="static/img/mail.png" alt="Mail Image" class="contact__mail">
+                    <p class="contact__para __1">Im Always Available To Get In Touch </p>
+                    <p class="contact__para __2">
+                        Want To See All My Projects. 
+                        You Can Visit My Github
+                    </p>
+                    <div class="contact__github">
+                        <img src="static/img/github.svg" alt="Github Image">
+                        <a href="https://github.com/kirafel">https://github.com/kirafel</a>
+                    </div>
+                </div>  
+                <div class="contact__right" data-aos="fade-left">
+                    <h2 class="contact__heading">Contact</h2>
+                    <form class="contact__form" method="post" action="index.html#contact">
+                        <input type="text" name="username" placeholder="Your Name">
+                        <input type="text" name="email" placeholder="Your Email">
+                        <textarea name="message" cols="30" rows="10" placeholder="Message" noresize></textarea>
+                        <button class="button" type="submit">Contact</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html"><h2>Haithem Daoud</h2></a>
+        <div class="footer__links">
+            <nav class="footer__nav">
+                <li class="footer__item"><a href="#home">Home</a></li>
+                <li class="footer__item"><a href="#about">About</a></li>
+                <li class="footer__item"><a href="#skills">Skills</a></li>
+                <li class="footer__item"><a href="#projects">Projects</a></li>
+                <li class="footer__item"><a href="#contact">Contact</a></li>
+            </nav>
+        </div>
+        <div class="footer__social">
+            <a href="https://www.facebook.com/haithemdaoud.se/" class="footer__icon"><img src="static/img/facebook.svg" alt="Facebook Icon"></a>
+            <a href="https://www.linkedin.com/in/haithem-daoud/" class="footer__icon"><img src="static/img/linkedin.svg" alt="LinkedIn Icon"></a>
+            <a href="https://www.facebook.com/haithemdaoud.se/" class="footer__icon"><img src="static/img/gmail.svg" alt="Gamil Icon"></a>
+        </div>
+    </footer>
+
+    <script src="../node_modules/aos/dist/aos.js"></script>
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
+    <script>
+        AOS.init();
+
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+            
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 200, // values from 0 to 3000, with step 50ms
+            duration: 600, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
+    </script>
+    
+    <script src="static/js/main.js"></script>
+
+</body>
+</html>

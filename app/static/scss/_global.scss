@@ -1,0 +1,310 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: $font-sm;
+    font-family: 'Poppins', sans-serif;
+    background-color: $veryLightGray;
+    
+    &.noscroll {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    
+    @include breakpoint-up(medium) {
+        font-size: $font-med;
+    }
+}
+
+.wrapper {
+    max-width: 90rem;
+    min-width: 23.4375rem;
+}
+
+// Typography
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+h1 {
+    font-size: $font-xlg;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $darkBlue;
+
+    span {
+        display: block;
+        line-height: 5rem;
+    }
+}
+
+h2 {
+    margin-top: 3.25rem;
+    color: $veryLightGray;
+    font-size: $font-mlg;
+
+    width: 10.55rem;
+    
+    span {
+        display: block;
+        line-height: 2rem;
+    }
+    
+    @include breakpoint-up(medium) {
+        font-size: $font-lg;
+        width: 19.5rem;
+        margin-top: 6.25rem;
+    }
+}
+
+h3 {
+    text-align: left;
+    color: $veryLightGray;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    
+    width: 10.55rem;    
+
+    @include breakpoint-up(medium) {
+        width: 19.5rem;
+    }
+    
+    @include breakpoint-up(medium) {
+        font-size: $font-med;
+    }
+}
+
+p, pre {
+    margin: 0;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+// Flexbox
+.flex {
+    display: flex;
+
+    &-direction {
+        flex-direction: column;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+// Grid
+.grid {
+    display: grid;
+
+    &-tc-large {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-ji-c {
+        justify-items: center;
+    }
+}
+
+// Spacing
+.wrapper {
+
+}
+
+// Buttons
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 0.875rem 2.175rem;
+    background-color: $softRed;
+    border-radius: 50px;
+    border: 0;
+    color: $veryLightGray;
+    font-weight: 400;
+    cursor: pointer;
+
+    width: 15rem;
+    
+    @include breakpoint-up(large) {
+        width: 30%;
+    }
+    margin: 0 auto;
+    outline: none;
+
+    color: $veryLightGray;
+    font-size: $font-med;
+    transition: opacity 300ms ease-in-out;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        background-color: rgba(255,255,255,0.25);
+        opacity: 0;
+
+        transition: opacity 150ms ease-in-out;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+// Forms
+[type="text"]:focus, textarea:focus {
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+
+    caret-color: $softRed
+}
+
+// Nav
+li {
+    list-style: none;
+}
+
+// Footer
+.footer {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    position: relative;
+    right: 0;
+    left: 0;
+    background-color: $darkBlue;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    justify-items: center;
+    display: grid;
+    align-items: center;
+
+    @include breakpoint-up(medium) {
+        margin-top: 0;
+    }
+    
+    @include breakpoint-up(large) {
+        padding: 1rem 2rem;
+        grid-template-columns: 1fr 3fr 1fr;
+        column-gap: 5rem;
+        row-gap: 0;
+        margin-top: 0;
+    }
+
+
+    h2 {
+        margin: 0;
+        color: $veryLightGray;
+        text-transform: uppercase;
+        width: fit-content;
+        font-size: $font-med;
+        text-decoration: underline;
+        
+        transition: all 150ms ease-in-out;
+        
+        @include breakpoint-up(large) {
+            font-size: $font-sm;
+        }
+    }
+
+    h2:hover {
+        color: $softRed;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        @include breakpoint-up(large) {
+            flex-direction: row;
+        }
+        
+        a {
+            font-size: $font-sm;
+            color: $veryLightGray;
+            transition: all 150ms ease-in-out;
+
+            @include breakpoint-up(large) {
+                padding-right: 2rem;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+    }
+
+
+    &__item:not(:last-child) {
+        margin-bottom: 0.8rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__social {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        
+        img {
+            width: 1.8rem;
+            transition: all 150ms ease-in-out;
+
+            @include breakpoint-up(large) {
+                width: 2.5rem;
+            }
+        }
+
+        img:hover {
+            opacity: 0.8;
+        }
+
+        a:not(:last-child)  {
+            padding-right: 1rem;
+        }
+    }
+}
+
+@include breakpoint-up(large) {
+    .d-none-lg {
+        display: none !important;    
+    }
+}
+
+@include breakpoint-down(medium) {
+    .d-none-med {
+        display: none !important;
+    }
+}
